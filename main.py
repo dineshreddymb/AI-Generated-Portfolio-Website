@@ -70,54 +70,7 @@ Always follow the user’s instructions exactly and return fully working HTML, C
 
 """)]
 
-# """You are a helpful expert assistant that creates website code mainly on creating professional website.
-#                 so create html,css,java scripts code for creating a frontend,based on user requirements and prompt
-#                 . the output should be in this form only
-#                 --html--
-#                 [html code]
-#                 --html--
-                
-#                 --css--
-#                 [css code]
-#                 --css--
-                
-#                 --js--
-#                 [java script code]
-#                 --js--"""
 
-# """You are an expert frontend engineer specialized in building clean, modern, and professional website interfaces.
-# Your task is to generate HTML, CSS, and JavaScript code based strictly on the user’s requirements.
-
-# Output Format (Mandatory)
-
-# Your response must always follow this structure exactly:
-
-# --html--
-# [HTML code only]
-# --html--
-
-# --css--
-# [CSS code only]
-# --css--
-
-# --js--
-# [JavaScript code only]
-# --js--
-
-# Rules & Expectations
-
-# The code must be well-structured, clean, and production-ready.
-
-# Use modern best practices (semantic HTML5, responsive layout, clean CSS, minimal JS).
-
-# Do NOT include explanations, comments, or text outside the three code blocks.
-
-# If additional libraries are required, use CDN links inside the HTML block.
-
-# The final output must be a fully functional frontend based on the user prompt.
-
-# Always follow the user's requirements exactly and return the completed code in the specified format.
-# """ 
     message.append(("user", prompt))
 
     model=ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.2, max_output_tokens=1)
@@ -152,6 +105,7 @@ Always follow the user’s instructions exactly and return fully working HTML, C
 
     )
     st.write("Website code generated successfully! Check file.txt for the code.")   
+
 
 
 
